@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://getbootstrap.com/examples/cover/ -->
+<html lang="en">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Domain Preview</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/dropzone/3.8.4/css/basic.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+
+    <script src="./Cover Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Cover Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style id="holderjs-style" type="text/css"></style>
+</head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="navbar-fixed-top clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Domain Preview</h3>
+              <ul class="nav masthead-nav">
+                <li><a href="http://twitter.com/mackaber">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+          	<p style="margin-top:40px">
+          		A tool to help selecting a domain name, by showing current domain holders<br>
+          		(service uses <a href="http://screenshotlayer.com">screenshotlayer.com</a>, it may be unavailable sometimes)<br>
+          	</p>
+            <p class="lead">
+            </p>
+          </div>
+        </div>
+        <div style="color:black;">
+        	<div class="form-inline">
+				<div class="input-group">
+				  <input id="sitename" type="text" class="form-control" placeholder="domainname" aria-describedby="basic-addon2">
+				  <span class="input-group-addon" id="basic-addon2">.com</span>
+				</div>
+	        	<button id="lookup" class="btn btn-default">Lookup</button>
+        	</div>
+        </div>
+        <br>
+        	<div class="form-inline">	
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotco" data-domain=".co">
+				  		</div>
+				      <div class="input-group-addon">.co</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotnet" data-domain=".net">
+				  		</div>
+				      <div class="input-group-addon">.net</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotme" data-domain=".me">
+				  		</div>
+				      <div class="input-group-addon">.me</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotmobi" data-domain=".mobi">
+				  		</div>
+				      <div class="input-group-addon">.mobi</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotbiz" data-domain=".biz">
+				  		</div>
+				      <div class="input-group-addon">.biz</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotio" data-domain=".io">
+				  		</div>
+				      <div class="input-group-addon">.io</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotcodotuk" data-domain=".co.uk">
+				  		</div>
+				      <div class="input-group-addon">.co.uk</div>
+				    </div>
+				 </div>
+				 <div class="input-group">
+				    <div class="input-group">
+				    	<div class="input-group-addon">
+				      		<input type="checkbox" class="domain input-group-addon" id="dotly" data-domain=".ly">
+				  		</div>
+				      <div class="input-group-addon">.ly</div>
+				    </div>
+				 </div>
+			</div>
+        <br> <br>
+        <div id="results" class="container">
+        </div>
+      </div>
+	</div>
+	<div  id="base" style="display:none" class="result col-sm-6 col-md-4">
+	    <div class="thumbnail" style="min-height:325.5px;">
+	      <a class="domain_image_link" href="#">
+			<img class="domain_image" style="height:212.5px" onerror="image_fallback(this);" alt="Domain Available!">
+		  </a>
+	      <div class="caption">
+	        <a class="domain_anchor" href="http://google.com" style="color:black;"><h3 class="domain_name">google.com</h3></a>
+	        <h4 id="domain_available" style="color:red;display:none;">DOMAIN MAY BE AVAILABLE!</h4>
+	      </div>
+	    </div>
+	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/dropzone/3.8.4/dropzone.min.js"></script>
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	  function image_fallback(image) {
+	  	$(image).parent().siblings(".caption").find("#domain_available").show();
+	  	$(image).attr("src","http://www.essentialhommemag.com/wp-content/themes/EHM2015/library/images/thumbnail-600x350.png");
+    	return true;
+	  }
+
+      $("#lookup").on('click',function(){
+      	$("#results").html("");
+      	sitename = $("#sitename").val();
+      	screenshot_service = "http://screenshotlayer.com/scl_api.php?url=http://";
+
+			extension = ".com";
+			el = $("#base").clone();
+			el.css("display","block");
+			el.find(".domain_image").attr("src",screenshot_service + sitename + extension);
+			el.find(".domain_image_link").attr("href",screenshot_service + sitename + extension);
+			el.find(".domain_anchor").attr("href","http://" + sitename + extension);
+			el.find(".domain_name").html(sitename + extension);
+			$("#results").append(el);
+
+		$(".domain:checked").each(function(){ 
+			extension = $(this).data("domain");
+			el = $("#base").clone();
+			el.css("display","block");
+			el.find(".domain_image").attr("src",screenshot_service + sitename + extension);
+			el.find(".domain_image").attr("alt",sitename + extension);
+			el.find(".domain_anchor").attr("href","http://" + sitename + extension);
+			el.find(".domain_name").html(sitename + extension);
+			$("#results").append(el);
+		});
+      });
+    </script>
+  </body>
+</html>
